@@ -3,8 +3,8 @@ import {render} from "react-dom";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 
 import { Header } from "./components/Header";
-import { Home } from "./components/Home";
-import { User } from "./components/User";
+import { Home_Dashboard } from "./components/Home";
+import { client_form } from "./components/forms/client_form";
 import { About } from "./components/About";
 
 class App extends React.Component {
@@ -13,16 +13,14 @@ class App extends React.Component {
         return(   
  <div ref = "master" className = "container">         
    
-    <BrowserRouter>
-      <div>     
-        <Header />        
+    <BrowserRouter>          
         <Switch>        
-            <Route exact path="/" component={Home}/>
-            <Route path="/user" component={User}/> 
+            <Route exact path="/" component={Home_Dashboard}/>
+            <Route path="/home" component={Home_Dashboard}/> 
             <Route path="/about" component={About}/> 
-            <Route path="/home" component={Home}/> 
-        </Switch>
-     </div>           
+            <Route path="/help" component={Help}/> 
+            <Route path="/forms/addclient" component={client_form}/> 
+        </Switch>          
     </BrowserRouter>         
  </div>      
         );
