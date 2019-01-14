@@ -1,6 +1,6 @@
 import React from "react";
 import {render} from "react-dom";
-import {BrowserRouter, Route, Switch, Link} from "react-router-dom";
+import {BrowserRouter, Route, Switch} from "react-router-dom";
 
 import { Header } from "./components/Header";
 import { Home } from "./components/Home";
@@ -15,8 +15,7 @@ class App extends React.Component {
    
     <BrowserRouter>
       <div>     
-         <Header />        
-        <br />
+        <Header />        
         <Switch>        
             <Route exact path="/" component={Home}/>
             <Route path="/user" component={User}/> 

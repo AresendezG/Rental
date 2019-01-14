@@ -21,9 +21,3 @@ export const NavItem = ({children, to, exact}) => {
     )
 }
 
-
-NavItem.propTypes = {
-    to: String,
-    exact: Boolean
-    //children: Node.isRequired,
-};
