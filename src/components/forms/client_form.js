@@ -4,15 +4,23 @@ export class client_form extends React.Component
 {
 
     // Example starter JavaScript for disabling form submissions if there are invalid fields
-    
+
 render(){
 
 return(
+<div id="master">
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Registrar a un nuevo Cliente</h1>
+    <p class="lead">Ingrese todos los datos para registrar un nuevo cliente</p>
+  </div>
+</div>
+<br />
 <form className="needs-validation" novalidate>
   <div className="form-row">
     <div className="col">
       <label for="name">Nombre</label>
-      <input type="text" class="form-control" placeholder="Nombre" id="name" required/> 
+      <input type="text" class="form-control" placeholder="Nombre" id="name" required/>
     </div>
     <div className="col">
       <label for="lastname">Apellido</label>
@@ -28,8 +36,8 @@ return(
     </div>
     <div className="form-group col-md-6">
       <label for="tel_number">Numero de Telefono</label>
-      <input type="tel" 
-              pattern = "[0-9]{3}-[0-9]{3}-[0-9]{4}"  
+      <input type="tel"
+              pattern = "[0-9]{3}-[0-9]{3}-[0-9]{4}"
               className="form-control" id="tel_number" placeholder="xxx-xxx-xxxx" />
     </div>
     <div class="valid-feedback">Telefono Valido</div>
@@ -64,13 +72,13 @@ return(
         <div className="form-group col-md4">
          <button class="btn btn-primary" type="submit">Agregar</button>
         </div>
-        <div className="form-group col-md4">       
+        <div className="form-group col-md4">
          <input type="reset" className="btn btn-secondary"/>
          </div>
- </div> 
+ </div>
 </form>
+</div>
 
-        
     ); }
 
 }

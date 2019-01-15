@@ -5,11 +5,11 @@ import {NavItem} from "./NavItem";
 //Stateless component
 
 export const Header  = (props) => {
-    return(  
+    return(
          <ul className="nav nav-pills nav-justified">
             <NavItem to={"/home"} children={"Home"} exact={true} />
             <NavItem to={"/about"} children={"About"} exact={true} />
-            <NavItem to={"/user"} children={"User"} exact={true} />
-          </ul>  
+            <NavItem to={"/help"} children={"Help"} exact={true} />
+          </ul>
          );
     };
