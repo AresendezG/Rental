@@ -1,8 +1,6 @@
 import React from "react";
 import {render} from "react-dom";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
-
-import { Header } from "./components/Header";
 import { Home_Dashboard } from "./components/Home";
 import { client_form } from "./components/forms/client_form";
 import { About } from "./components/About";
@@ -20,7 +18,7 @@ class App extends React.Component {
             <Route path="/home" component={Home_Dashboard}/>
             <Route path="/about" component={About}/>
             <Route path="/help" component={Help}/>
-            <Route path="/forms/addclient" component={client_form}/>
+            <Route path="/forms/new_client" component={client_form}/>
         </Switch>
     </BrowserRouter>
  </div>

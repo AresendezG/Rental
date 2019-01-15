@@ -1,20 +1,29 @@
 import React from "react";
+import { Form_footer } from '../msc/form_footer'; // Import
 
 export class client_form extends React.Component
 {
 
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
+  constructor(props){
+    super();
+    };
+
+
+cancelClick(){  
+
+  var leave = window.confirm("¿Desea cancelar este registro?");
+  if(leave)
+    window.location.href = "/home";
+  else
+    document.getElementById("name").focus();
+}
+
 
 render(){
 
 return(
 <div id="master">
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">Registrar a un nuevo Cliente</h1>
-    <p class="lead">Ingrese todos los datos para registrar un nuevo cliente</p>
-  </div>
-</div>
+
 <br />
 <form className="needs-validation" novalidate>
   <div className="form-row">
@@ -69,14 +78,19 @@ return(
     </div>
   </div>
   <div className="form-row">
-        <div className="form-group col-md4">
-         <button class="btn btn-primary" type="submit">Agregar</button>
+        <div className="form-group col-md6">
+         <button className="btn btn-success" onClick = {this.submit}>Agregar</button>
         </div>
-        <div className="form-group col-md4">
-         <input type="reset" className="btn btn-secondary"/>
+        <div className="form-group col-md6">
+         <button className="btn btn-danger" type="reset">Limpiar </button>
+         </div>
+         <div className="form-group col-md6">
+         <button class="btn btn-primary" onClick={this.cancelClick.bind(this)}>Cancelar</button>
          </div>
  </div>
 </form>
+<br />
+<Form_footer header={"Agregar Nuevo Cliente"} info = {"Complete los campos"} />
 </div>
 
     ); }
