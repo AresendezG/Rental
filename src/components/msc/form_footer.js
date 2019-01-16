@@ -1,8 +1,8 @@
-import React, {PropTypes} from 'react'
+import React from 'react'
 //import {Route, Link} from 'react-router-dom'
 
 
-export const Form_footer = ({header, info}) => {
+export const FormFooter = ({header, info}) => {
 
 return (
 <div className="jumbotron jumbotron-fluid text-center">

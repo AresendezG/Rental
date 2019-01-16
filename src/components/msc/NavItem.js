@@ -1,4 +1,4 @@
-import React, {PropTypes} from 'react'
+import React from 'react'
 import {Route, Link} from 'react-router-dom'
 
 
