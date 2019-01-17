@@ -13,7 +13,7 @@ export class client_form extends React.Component
       email: "",
       address: "",
       address2: "",
-      zipcode: ""
+      zipcode: "",
       customer_code: ""
     };
 
