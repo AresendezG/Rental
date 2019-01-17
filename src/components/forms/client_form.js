@@ -6,26 +6,38 @@ export class client_form extends React.Component
 {
 
   constructor(props){
-    super();
+    super(props);
+    this.state = {
+      name: "",
+      lastname: "",
+      email: "",
+      address: "",
+      address2: "",
+      zipcode: ""
+      customer_code: ""
+    };
+
     };
 
 
     onSubmitForm(){
       var submit_form = window.confirm("¿Desea registrar este cliente?");
-    
+
       if(submit_form)
       {
-        alert ("alerta");
         var random = Math.floor((Math.random() * 9999) + 1000);
-        var customer_register = (document.getElementById("name".value)).substr(0,2) + (document.getElementById("lastname".value)).substr(0,2) + random.toString();
+        var customer_register = (document.getElementById("name").value).substr(0,2) + (document.getElementById("lastname").value).substr(0,2) + random.toString();
         document.getElementById("cust_number").value = customer_register;
         alert("El cliente fue agregado con el registro: "+customer_register);
-        
+        window.location.href = "/home"; // Return to home
+
       }
       else
-      {}
-      alert("Enviar Formulario!");
-    }   
+      {
+        document.getElementById('name').focus(); // Send focus to Name
+
+      }
+    }
     cancel_form(){
       var leave = window.confirm("¿Desea cancelar este registro?");
       if(leave)
@@ -36,12 +48,12 @@ export class client_form extends React.Component
 
 render(){
 
-
+//onSubmit = {this.onSubmitForm}
 return(
 <div id="master">
 
 <br />
-<form className="needs-validation" onSubmit = {this.onSubmitForm} validate="true" >
+<form className="needs-validation"  validate="true" >
   <div className="form-row">
     <div className="col">
       <label htmlFor="name">Nombre</label>
