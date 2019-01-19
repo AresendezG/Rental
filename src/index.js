@@ -20,7 +20,7 @@ class App extends React.Component {
             <Route path="/about" component={About}/>
             <Route path="/help" component={Help}/>
             <Route path="/forms/new_customer" component={client_form}/>
-            <Route path="/rental/new_rent" component={RentalHome}/>
+            <Route path="/rental/new_rent_ticket" component={RentalDashboard}/>
         </Switch>
     </BrowserRouter>
  </div>

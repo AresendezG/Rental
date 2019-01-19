@@ -1,7 +1,6 @@
 import React from "react";
-import {Link} from "react-router-dom";
 
-export class ArticleDetail extends React.Component{
+export class FinishTicket extends React.Component{
 
   render(){
 
@@ -11,7 +10,7 @@ export class ArticleDetail extends React.Component{
 <div id="FindArticle">
 
  <a href="/rental/new_rent_ticket" className = "btn btn-outline-cancel btn-block">Cancelar </a>
- <div id="Home Header" className="footer jumbotron text-center">Form para buscar Articulo</div>
+ <div id="Home Header" className="footer jumbotron text-center">Este componente mostrara el carrito de compras y los articulos</div>
 
 </div>
 
