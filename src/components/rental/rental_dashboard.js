@@ -1,5 +1,4 @@
 import React from "react";
-import {BrowserRouter, Switch, Route} from "react-router-dom";
 
 import {RentalHome} from "./rental_home";
 import {ArticleDetail} from "./article_detail";
@@ -11,16 +10,33 @@ export class RentalDashboard extends React.Component {
     render(){
         return(
 
- <div ref = "master" className = "container">
+ <div ref = "master_dashboard" className = "container">
+    <div className="container" id="skeleton_grid">
+      <div className="row justify-content-md-center">
+        <div className="col col-lg-2">
+        <div className="btn-group-vertical" role="group" aria-label="Control">
+            <button type="button" className="btn btn-outline-success">Buscar un articulo</button>
+            <button type="button" className="btn btn-outline-success">Ver detalles</button>
+            <button type="button" className= "btn-outline-success">Ver Carrito de compra</button>
+            <button type="button" className= "btn-outline-warning">Limpiar Busqueda</button>
+            <button type="button" className= "btn-outline-danger">Regresar </button>
+          </div>
+         
 
-    <BrowserRouter>
-        <Switch>
-            <Route exact path="/rental/new_rent_ticket" component={RentalHome}/>
-            <Route path="/rental/article_detail" component={ArticleDetail}/>
-            <Route path="/rental/find_article" component={FindArticle}/>
-            <Route path="/rental/cart" component={FinishTicket}/>
-        </Switch>
-    </BrowserRouter>
+        </div>
+        <div class="col-md-auto">
+          Variable width content
+        </div>
+        <div class="col col-lg-2">
+         Column 3 of 4
+        </div>
+        <div class="col col-lg-2">
+         Column 4
+        </div>
+      </div>
+      </div>
+
+
  </div>
         );
     }

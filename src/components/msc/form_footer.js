@@ -5,7 +5,7 @@ import React from 'react'
 export const FormFooter = ({header, info}) => {
 
 return (
-<div className="jumbotron jumbotron-fluid text-center">
+<div className="footer jumbotron jumbotron-fluid text-center">
         <h1>{header}</h1>
         <p>{info}</p> 
 </div>
