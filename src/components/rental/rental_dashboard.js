@@ -75,7 +75,7 @@ export class RentalDashboard extends React.Component {
         <div className="col col-lg-2" id = "ElementList">
          Column 3 of 4
         </div>
-        <div className="col" id="cart-column">
+        <div className="col" id="cart-column"A>
           
       <div className="card">
         <div className="card-body">
