@@ -7,36 +7,87 @@ import {FinishTicket} from "./finish_ticket";
 
 export class RentalDashboard extends React.Component {
 
+  constructor(props){
+    super(props);
+    this.state = {
+        optionActive: "Buscar",
+        elementsOnCart: [""], 
+        Find: false,
+        Details: false,
+        Cart: false,
+        Cancel: false
+      };
+  
+  };
+
+  clickHandler (){
+
+  }
+
+  changeActive = event => {
+      
+    const name = event.target.name;
+    //const value = this.state([name]);
+
+    switch(name){
+
+      case "Find":
+      break;
+      case "Details":
+      break;
+      case "Cancel":
+      break;
+      case "Cart":
+      break;
+      default: 
+      break;
+
+    }
+  
+    this.setState({
+        optionActive: name
+    });
+  
+}
+
     render(){
+
+  const activeClass = "btn btn-primary btn-block";
+  const inactiveClass = "btn btn-secondary btn-block";      
         return(
 
- <div ref = "master_dashboard" className = "container">
-    <div className="container" id="skeleton_grid">
-      <div className="row justify-content-md-center">
+ <div ref = "master_dashboard">
+    <div id="skeleton_grid">
+      <div className="row">
         <div className="col col-lg-2">
-        <div className="btn-group-vertical" role="group" aria-label="Control">
-            <button type="button" className="btn btn-outline-success">Buscar un articulo</button>
-            <button type="button" className="btn btn-outline-success">Ver detalles</button>
-            <button type="button" className= "btn-outline-success">Ver Carrito de compra</button>
-            <button type="button" className= "btn-outline-warning">Limpiar Busqueda</button>
-            <button type="button" className= "btn-outline-danger">Regresar </button>
-          </div>
-         
-
+           <div className= "row">
+              <div className = "col">
+               <button className={this.state.optionActive == "Find"? activeClass : inactiveClass} name="Find" onClick = {this.changeActive} >Buscar </button>
+               <button className={this.state.optionActive == "Details"? activeClass : inactiveClass} name="Details" onClick = {this.changeActive}>Detalles </button>
+               <button className={this.state.optionActive == "Cart"? activeClass : inactiveClass} name="Cart" onClick = {this.changeActive}>Carrito</button>
+               <button className={this.state.optionActive == "Cancel"? activeClass : inactiveClass} name="Cancel" onClick = {this.changeActive}>Cancelar</button>
+              </div>
+           </div>  
         </div>
-        <div class="col-md-auto">
+        <div className="col-md-auto" id = "sub-dashboard">
           Variable width content
         </div>
-        <div class="col col-lg-2">
+        <div className="col col-lg-2" id = "ElementList">
          Column 3 of 4
         </div>
-        <div class="col col-lg-2">
-         Column 4
+        <div className="col" id="cart-column">
+          
+      <div className="card">
+        <div className="card-body">
+        <h5 className="card-title">Articulos en Carrito</h5>
+        <h6 className="card-subtitle mb-2 text-muted">{this.state.elementsOnCart[0]}</h6>
+        </div>
+     </div>
+
+
         </div>
       </div>
       </div>
-
-
  </div>
         );
     }
