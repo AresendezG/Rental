@@ -11,7 +11,7 @@ export class RentalDashboard extends React.Component {
     super(props);
     this.state = {
         optionActive: "Buscar",
-        elementsOnCart: [""], 
+        elementsOnCart: [], 
         Find: false,
         Details: false,
         Cart: false,
@@ -64,37 +64,20 @@ export class RentalDashboard extends React.Component {
  <div ref = "master_dashboard">
     <div id="skeleton_grid">
       <div className="row">
-        <div className="col col-lg-2">
+        <div className="col col-lg-3">
            <div className= "row">
               <div className = "col">
-               <button className={this.state.optionActive == "Find"? activeClass : inactiveClass} name="Find" onClick = {this.changeActive} >Buscar </button>
-               <button className={this.state.optionActive == "Details"? activeClass : inactiveClass} name="Details" onClick = {this.changeActive}>Detalles </button>
-               <button className={this.state.optionActive == "Cart"? activeClass : inactiveClass} name="Cart" onClick = {this.changeActive}>Carrito</button>
-               <button className={this.state.optionActive == "Cancel"? activeClass : inactiveClass} name="Cancel" onClick = {this.changeActive}>Cancelar</button>
+               <button className={this.state.optionActive === "Find"? activeClass : inactiveClass} name="Find" onClick = {this.changeActive} >Buscar </button>
+               <button className={this.state.optionActive === "Details"? activeClass : inactiveClass} name="Details" onClick = {this.changeActive}>Detalles </button>
+               <button className={this.state.optionActive === "Cart"? activeClass : inactiveClass} name="Cart" onClick = {this.changeActive}>Articulos en Carrito: {this.state.elementsOnCart.length}</button>
+               <button className={this.state.optionActive === "Cancel"? activeClass : inactiveClass} name="Cancel" onClick = {this.changeActive}>Cancelar</button>
               </div>
            </div>  
         </div>
-        <div className="col-md-auto" id = "sub-dashboard">
+        <div className="col col-lg-9" id = "sub-dashboard">
           {this.state.drawItem}
         </div>
-        <div className="col" id = "ElementList">
-         Column 3 of 4
         </div>
-        <div className="col" id="cart-column">
-      <div className="row">   
-        <div className="card">
-        <div className="card-body">
-        <h5 className="card-title">Articulos en Carrito</h5>
-        <h6 className="card-subtitle mb-2 text-muted">{this.state.elementsOnCart[0]}</h6>
-        </div>
-        </div>
-     </div>
-        <div className="row">
-         <button className="btn btn-outline-dark">Agregar al carrito</button> 
-        </div> 
-
-        </div>
-      </div>
       </div>
  </div>
         );

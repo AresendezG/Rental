@@ -1,5 +1,6 @@
 import React from "react";
 import {render} from "react-dom";
+import './stylesheet.css';
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import { Home_Dashboard } from "./components/Home";
 import { client_form } from "./components/forms/client_form";
@@ -11,9 +12,15 @@ class App extends React.Component {
 
     render(){
         return(
- <div ref = "master" className = "container">
-
-    <BrowserRouter>
+ <div id = "master" className = "container">
+    <div id="app_header" className="header_custom">
+        <br />
+        <h1>MDR Rental Application</h1>
+        <p className="subtitles">App para crear tickets de renta y venta!</p>
+        <br />
+    </div>
+    
+    <BrowserRouter >
         <Switch>
             <Route exact path="/" component={Home_Dashboard}/>
             <Route path="/home" component={Home_Dashboard}/>

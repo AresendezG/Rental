@@ -1,0 +1,150 @@
+
+.header_custom {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 100%;
+  height: 120%;
+  overflow: hidden;
+  border: none;
+  -webkit-border-radius: 1em;
+  border-radius: 1em;
+  font: normal normal bold 150%/1 "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  color: rgba(255,255,255,1);
+  text-align: center;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  background: -webkit-linear-gradient(45deg, rgba(102,13,81,1) 0, rgba(173,18,131,1) 50%, rgba(222,71,172,1) 100%);
+  background: -moz-linear-gradient(45deg, rgba(102,13,81,1) 0, rgba(173,18,131,1) 50%, rgba(222,71,172,1) 100%);
+  background: linear-gradient(45deg, rgba(102,13,81,1) 0, rgba(173,18,131,1) 50%, rgba(222,71,172,1) 100%);
+  background-position: 50% 50%;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: auto auto;
+  background-size: auto auto;
+}
+
+
+.subtitles {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  border: none;
+  font: italic normal bold 20px/1 Arial, Helvetica, sans-serif;
+  color: rgba(255,255,255,1);
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  letter-spacing: 2px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+
+.main_button {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  cursor: pointer;
+  margin: 1%;
+  padding: -1%;
+  border: 2px solid #b501c1;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  font: normal 16px/normal "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  color: rgba(0,0,0,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: rgb(255,255,255);
+  -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.main_button:hover{
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  cursor: hand;
+  margin: 1%;
+  padding: -1%;
+  border: 2px solid rgba(15,14,15,1);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  font: normal 16px/normal "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  color: rgba(255,255,255,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: rgba(131,4,137,1);
+  -webkit-transition: color 310ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+  -moz-transition: color 310ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+  -o-transition: color 310ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+  transition: color 310ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+}
+
+.button_main {
+  border-radius: 4px;
+  background-color: #830489;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button_main span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button_main span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button_main:hover span {
+  padding-right: 25px;
+}
+
+.button_main:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.searchIcon {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 100%;
+  height: 100%;
+  border: none;
+  font: normal 16px/1 "Trebuchet MS", Helvetica, sans-serif;
+  color: black;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  background: url("https://enjoycss.com/bg-img/custom/38269-1yjtj1i.sl2i.png");
+  background-position: 50% 50%;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: auto auto;
+  background-size: auto auto;
+}
