@@ -9,8 +9,8 @@ export class FindArticle extends React.Component{
 
     return(
 <div id="FindArticle">
-<a href="/rental/new_rent_ticket" className = "btn btn-outline-cancel btn-block">Cancelar </a>
- <div id="Home Header" className="footer jumbotron text-center">Form para buscar Articulo</div>
+        <a href="/rental/new_rent_ticket" className = "btn btn-outline-cancel btn-block">Cancelar Find </a>
+        <div id="Home Header" className="footer jumbotron text-center">Detalles en el form</div>
 
 </div>
 

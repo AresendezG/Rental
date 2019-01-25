@@ -15,7 +15,8 @@ export class RentalDashboard extends React.Component {
         Find: false,
         Details: false,
         Cart: false,
-        Cancel: false
+        Cancel: false,
+        drawItem : <FindArticle />
       };
   
   };
@@ -27,13 +28,16 @@ export class RentalDashboard extends React.Component {
   changeActive = event => {
       
     const name = event.target.name;
+    var itemToDraw;
     //const value = this.state([name]);
 
     switch(name){
 
       case "Find":
+        itemToDraw = <FindArticle />;
       break;
       case "Details":
+        itemToDraw = <ArticleDetail />;
       break;
       case "Cancel":
       break;
@@ -45,7 +49,8 @@ export class RentalDashboard extends React.Component {
     }
   
     this.setState({
-        optionActive: name
+        optionActive: name,
+        drawItem: itemToDraw
     });
   
 }
@@ -53,7 +58,7 @@ export class RentalDashboard extends React.Component {
     render(){
 
   const activeClass = "btn btn-primary btn-block";
-  const inactiveClass = "btn btn-secondary btn-block";      
+  const inactiveClass = "btn btn-outline-dark btn-block";      
         return(
 
  <div ref = "master_dashboard">
@@ -70,20 +75,23 @@ export class RentalDashboard extends React.Component {
            </div>  
         </div>
         <div className="col-md-auto" id = "sub-dashboard">
-          Variable width content
+          {this.state.drawItem}
         </div>
-        <div className="col col-lg-2" id = "ElementList">
+        <div className="col" id = "ElementList">
          Column 3 of 4
         </div>
-        <div className="col" id="cart-column"A>
-          
-      <div className="card">
+        <div className="col" id="cart-column">
+      <div className="row">   
+        <div className="card">
         <div className="card-body">
         <h5 className="card-title">Articulos en Carrito</h5>
         <h6 className="card-subtitle mb-2 text-muted">{this.state.elementsOnCart[0]}</h6>
         </div>
+        </div>
      </div>
-
+        <div className="row">
+         <button className="btn btn-outline-dark">Agregar al carrito</button> 
+        </div> 
 
         </div>
       </div>

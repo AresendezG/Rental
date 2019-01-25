@@ -10,7 +10,7 @@ export class ArticleDetail extends React.Component{
     return(
 <div id="FindArticle">
 
- <a href="/rental/new_rent_ticket" className = "btn btn-outline-cancel btn-block">Cancelar </a>
+ <a href="/rental/new_rent_ticket" className = "btn btn-outline-cancel btn-block">Cancelar Details </a>
  <div id="Home Header" className="footer jumbotron text-center">Form para buscar Articulo</div>
 
 </div>
