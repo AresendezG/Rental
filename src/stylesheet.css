@@ -148,3 +148,31 @@ code {
   -webkit-background-size: auto auto;
   background-size: auto auto;
 }
+
+.paddingContainer {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  margin: 1em 1em 1em;
+  border: 2px solid rgba(0,150,255,0.91);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+
+.innerContainer{
+-webkit-box-sizing: content-box;
+-moz-box-sizing: content-box;
+box-sizing: content-box;
+margin: 1em;
+padding: 1em;
+border: 2px solid;
+-webkit-border-radius: 10px;
+border-radius: 10px;
+font: normal 14px/1 "Times New Roman", Times, serif;
+color: rgba(0,0,0,1);
+-o-text-overflow: ellipsis;
+text-overflow: ellipsis;
+
+}

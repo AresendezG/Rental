@@ -16,10 +16,9 @@ class App extends React.Component {
     <div id="app_header" className="header_custom">
         <br />
         <h1>MDR Rental Application</h1>
-        <p className="subtitles">App para crear tickets de renta y venta!</p>
         <br />
     </div>
-    
+
     <BrowserRouter >
         <Switch>
             <Route exact path="/" component={Home_Dashboard}/>
