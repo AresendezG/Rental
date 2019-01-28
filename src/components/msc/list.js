@@ -7,27 +7,22 @@ export class Listofitems extends React.Component{
 
   this.state = {
     list_items: props.itemstoshow,
-    idname: props.idname
+    idname: props.idname,
+    nameofClass: props.nameofClass,
+    labelstr: props.labelstr
 
   };
 };
 
 render(){
   return(
-    <div id={this.state.idname}>
-    <div className="form-group">
-      <label htmlFor="ArticleList">Articulos encontrados: </label>
-      <select  className="form-control" id="ArticleList">
-
-    {
-      this.state.list_items.map((item) => <option key={item}>{item}</option>)
-
-        }
+      <div className={this.state.nameofClass}>
+      <label htmlFor={this.state.idname}>{this.state.labelstr}</label>
+      <select  className="form-control" id={this.state.idname} onFocus={this.props.focusFunction} onChange={this.props.focusFunction}>     {
+             this.props.itemstoshow.map((item) => <option key={item}>{item}</option>)
+         }
       </select>
-    </div>
-    </div>
-
+      </div>
   )
-
 }
 }

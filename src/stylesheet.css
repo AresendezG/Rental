@@ -176,3 +176,19 @@ color: rgba(0,0,0,1);
 text-overflow: ellipsis;
 
 }
+
+.listContainer {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  margin: 1em;
+  padding: 1em;
+  overflow: hidden;
+  border: 2px solid;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  color: rgba(153,0,255,0.7);
+  text-align: center;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
