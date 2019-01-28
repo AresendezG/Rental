@@ -6,16 +6,17 @@ export class Listofitems extends React.Component{
   super(props);
 
   this.state = {
-    list_items: props.itemstoshow
+    list_items: props.itemstoshow,
+    idname: props.idname
 
   };
 };
 
 render(){
   return(
-    <div id="col2" className="col col-lg-3">
+    <div id={this.state.idname}>
     <div className="form-group">
-      <label htmlFor="ArticleList">Example Article List</label>
+      <label htmlFor="ArticleList">Articulos encontrados: </label>
       <select  className="form-control" id="ArticleList">
 
     {

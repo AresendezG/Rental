@@ -1,34 +1,22 @@
 import React from "react";
 import {PriceInput} from "../msc/PriceInput.js";
 
+
 export class FindArticle extends React.Component{
     constructor(props){
     super(props);
 
     this.state = {
-      list_items: props.elementsFound,
-
+      renderListObj: null
     };
+    //this.clickHandler = this.clickHandler.bind(this);
+
+  }
 
 
-  };
+resetHandler(){
 
-clickHandler(){
-    var num;
-    var foundMatches = [];
-
-    for (var i=0; i<5; i++){
-      num = Math.floor((Math.random() * 9999) + 1000);
-      foundMatches[i] = num.toString();
-    }
-
-
-    this.setState({
-      list_items: foundMatches
-
-    });
 }
-
 
   render(){
     var buttons_class = "btn btn-outline-primary btn-block";
@@ -37,7 +25,7 @@ clickHandler(){
 <div id="FindArticle" className = "paddingContainer">
   <div id="row1" className="row">
   <div id="col1" className="col">
-      <form className="container">
+      <form className="container" onSubmit={this.props.findFunction}>
         <div className="row">
             <label htmlFor="articleNumber" className="col">Buscar Por Número de Articulo: </label>
             <input name="articleNumber" placeholder="# de Articulo..." className="col form-control" />
@@ -50,8 +38,8 @@ clickHandler(){
         <div className="col"><label>Color: </label></div><div className="col"><label>Estilo: </label></div>
         </div>
         <div className="row">
-        <div className="col"><button className = "btn btn-success" onClick={this.clickHandler}>Buscar... </button></div>
-        <div className="col"><button className = "btn btn-danger" type="reset">Limpiar </button></div>
+        <div className="col"><button className = "btn btn-success" onClick={this.props.findFunction}>Buscar... </button></div>
+        <div className="col"><button className = "btn btn-danger" type="reset">Limpiar Búsqueda </button></div>
         </div>
       </form>
   </div>
