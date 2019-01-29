@@ -17,7 +17,7 @@ export class RentalDashboard extends React.Component {
     this.state = {
         optionActive: "Buscar",
         elementsOnCart: [],
-        elementsFound: [
+        allRecordsFound: [
             ["element1", "color 1","style 1","Price 1","Picture 1"], 
             ["element2", "Color 2","Style 2","Price 2","Picture 2"],
             ["element3", "Color 3","style 3","Price 3","Picture 3"],
@@ -77,22 +77,29 @@ export class RentalDashboard extends React.Component {
 
 getElementstoShow(event){
     var num;
-    var foundMatches = []; 
+    var foundMatches = [[],[]]; 
+    var subArray = [];
+    var listArray = [];
 
     //crea un array falso de 5 elementos con 5 Características cada uno.
     for (var i=0; i<5; i++){
       
       num = Math.floor((Math.random() * 9999) + 1000);
-      option = 
-      foundMatches[i,0] = num.toString();
-      foundMatches[i,1] = "Color Example:"+i.toString();
-      foundMatches[i,2] = "Style Ex:" +i.toString();
-      foundMatches[i,3] = "Price: $"+num.toString();
-      foundMatches[i,4] = "Picture:"+i.toString();
-      
+      subArray[0] = num.toString();
+      subArray[1] = "Color Example:"+i.toString();
+      subArray[2] = "Style Ex:" +i.toString();
+      subArray[3] = "Price: $"+num.toString();
+      subArray[4] = "Picture:"+i.toString();
+      foundMatches[i] = subArray;
+      listArray[i] = num.toString();
     }
-    var itemToDraw = <Listofitems itemstoshow={foundMatches[1]} idname="MatchesFound" nameofClass="listContainer" labelstr="Articulos Encontrados:" focusFunction={this.setPickedElement}/> ;
-    console.log(foundMatches);
+    /*Found Matches simulates a Query to database (2D Array of Columns + Records) */
+    /*Given a 2D Array, pick element 0 to display "Serials" */
+    console.log("Sub array is: ");
+    console.log(listArray);
+
+    var itemToDraw = <Listofitems itemstoshow={listArray} idname="MatchesFound" nameofClass="listContainer" labelstr="Articulos Encontrados:" focusFunction={this.setPickedElement}/> ;
+
     this.setState({
       elementsFound: foundMatches,
       listArea: itemToDraw
