@@ -4,7 +4,7 @@ export class FinishTicket extends React.Component{
 
   render(){
 
-    var buttons_class = "btn btn-outline-primary btn-block";
+    //var buttons_class = "btn btn-outline-primary btn-block";
 
     return(
 <div id="FindArticle">
