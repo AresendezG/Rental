@@ -32,6 +32,7 @@ export class RentalDashboard extends React.Component {
       this.getElementstoShow = this.getElementstoShow.bind(this);
       this.setPickedElement = this.setPickedElement.bind(this);
       this.showDetails = this.showDetails.bind(this);
+      this.addToCartFnc = this.addToCartFnc.bind(this);
 
   };
 
@@ -58,7 +59,7 @@ export class RentalDashboard extends React.Component {
       case "Details":
         console.log("Array que se pasó: ");
         console.log(this.state.allRecordsFound[this.state.pickedIndex]);
-        itemToDraw = <ArticleDetail SelectedArticleArray = {this.state.allRecordsFound[this.state.pickedIndex]} />;
+        itemToDraw = <ArticleDetail SelectedArticleArray = {this.state.allRecordsFound[this.state.pickedIndex]} addToCartFncProp={this.addToCartFnc} />;
         drawListArea = <Listofitems itemstoshow={this.state.elementsFound}/>;
         drawButtonArea= <CustomButton buttonName="buttonToShowDetails" childText="Mostrar Detalles" showFunction={this.showDetails} nameofClass="btn btn-primary btn-block" />
 
@@ -159,7 +160,14 @@ setPickedElement (event){
       optionActive: "Details"
     });
     //this.buttonDetails.current.click(); 
-  
+  }
+
+  addToCartFnc(){
+    if(window.confirm("¿Desea añadir este articulo al carrito de compras?"))
+      window.alert("Agregado");
+    else
+      window.alert("No agregado! ");
+
   }
 
 

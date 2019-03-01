@@ -42,7 +42,7 @@ export class ArticleDetail extends React.Component{
       {this.props.SelectedArticleArray[4]}
     </div>
     <div className="row">
-      <CustomButton nameofClass="btn btn-success btn-block" childText = "Agregar al carrito"/>
+      <CustomButton nameofClass="btn btn-success btn-block" childText = "Agregar al carrito" showFunction={this.props.addToCartFncProp}/>
     </div>
   </div>
   </div>
